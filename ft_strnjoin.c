@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktwomey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 09:49:16 by ktwomey           #+#    #+#             */
-/*   Updated: 2018/06/22 15:28:02 by ktwomey          ###   ########.fr       */
+/*   Created: 2018/06/15 11:07:10 by ktwomey           #+#    #+#             */
+/*   Updated: 2018/06/15 13:24:39 by ktwomey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+char	*ft_strnjoin(char const *str1, char const *str2, size_t n)
 {
-	write(fd, &c, 1);
+	char	*ret;
+
+	if (!str1 || !str2)
+		return (NULL);
+	ret = (char *)malloc(ft_strlen((char *)str1) + (n));
+	if (!ret)
+		return (NULL);
+	ret = ft_strcpy(ret, str1);
+	ret = ft_strncat(ret, str2, n);
+	return (ret);
 }

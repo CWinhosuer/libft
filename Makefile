@@ -6,13 +6,13 @@
 #    By: ktwomey <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/31 11:26:55 by ktwomey           #+#    #+#              #
-#    Updated: 2018/06/14 10:01:27 by ktwomey          ###   ########.fr        #
+#    Updated: 2018/06/22 11:26:28 by ktwomey          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 cc = gcc
-CFLAGS = -Wall -Werror -Wextra -std=c99 -c 
+CFLAGS = -Wall -Werror -Wextra -c 
 FUNCS = ft_atoi \
 ft_bzero \
 ft_intlen \
@@ -67,6 +67,7 @@ ft_isspace \
 ft_strsplit \
 ft_strjoin \
 ft_strtrim \
+ft_strnjoin \
 
 SRCC = $(addsuffix .c, $(FUNCS))
 SRCO = $(addsuffix .o, $(FUNCS))
